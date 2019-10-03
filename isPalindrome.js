@@ -1,10 +1,10 @@
 const isPalindrome = (str) => {
-  const letterNumber = str.length;
-  if (letterNumber <= 1) {
+  const index = str.length;
+  if (index <= 1) {
     return true;
   }
-  if ( str.substr(0, 1) !== str.substr (letterNumber - 1, 1)) {
+  if (str.substr(0, 1) !== str.substr(index - 1, 1)) {
     return false;
   }  
-  return isPalindrome(str.substr(1, letterNumber -2));
+  return isPalindrome(str.substr(1, index -2));
   } 
