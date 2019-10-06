@@ -11,9 +11,12 @@ const substr = (str, startIndex, subLenght) => {
   if (startIndex + subLenght-1 > str.length) {
     subLenght = str.length - startIndex;
   }
-  let result = '';
-  for (let i = 0; i < subLenght; i += 1) {
-    result += str[startIndex + i];
-  } 
-  return result;
+  if (typeof str === 'string' && typeof startIndex === 'number' && typeof subLenght === 'number') {
+    let result = '';
+    for (let i = 0; i < subLenght; i += 1) {
+      result += str[startIndex + i];
+    }
+    return result;
+  }
+  return 'Check the input data!';
 }
