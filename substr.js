@@ -1,4 +1,5 @@
 const substr = (str, startIndex, subLenght) => {
+  str = str.toString();
   if (subLenght < 0) {
     subLenght = 1;
   }
@@ -18,5 +19,8 @@ const substr = (str, startIndex, subLenght) => {
     }
     return result;
   }
-  return 'Check the input data!';
+  if (typeof startIndex === 'string' || typeof subLenght === 'string') {
+    return "Проверьте входные данные!";
+    }
+  return str;
 }
